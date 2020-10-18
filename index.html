@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LAB</title>
+	<link rel="stylesheet" href="style.css">
+	
+</head>
+<body>
+	<h2>Lab Work OIB #4</h2>
+<div class="container" id="container">
+
+
+	<div class="form-container sign-up-container"> <!-- Авторизация -->
+		<form action="#">
+			<h1>Create Account</h1>
+			<div class="social-container">
+<!-- 				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a> -->
+			</div>
+			<!-- <span>or use your email for registration</span> -->
+
+			<input type="text" placeholder="Name" id="Name" />
+			<input type="email" placeholder="Email" id="Email" />
+			<input type="password" placeholder="Password" id="Password" />
+
+			<button id="Sign_Up">Sign Up</button>
+		</form>
+	</div>
+
+	<div class="form-container sign-in-container"> <!-- Логин -->
+		<form action="index1.html" onsubmit=" return validateLogin()">
+			<h1>Sign in</h1>
+			<div class="social-container">
+<!-- 				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a> -->
+			</div>
+			<!-- <span>or use your account</span> -->
+			<input type="email" placeholder="Email" id="LoginEmail" />
+			<input type="password" placeholder="Password"  id="LoginPassword" />
+			<!-- <a href="changePass.html">Forgot your password or unlock Email?</a> -->
+			<button id="Sign_In" type="submit">Sign In</button>
+		</form>
+	</div>
+
+	<div class="overlay-container"> <!-- Левый переходной оверлей -->
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Welcome Back!</h1>
+				<p>Login is here!</p>
+				<button class="ghost" id="signIn">Sign In</button>
+			</div>
+
+			<div class="overlay-panel overlay-right"> <!-- Правый переходной оверлей -->
+				<h1>Hello, Friend!</h1>
+				<p>You can create account here!</p>
+				<button class="ghost" id="signUp">Sign Up</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="login-wrap">
+	<div class="login-html">
+		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Unlock Password</label>
+		<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Change Password</label>
+		<div class="login-form">
+			<div class="sign-in-htm">
+				<div class="group">
+					<label for="user" class="label">Existing Email</label>
+					<input id="user1" type="text" class="input">
+				</div>
+				<div class="group">
+					<label for="pass" class="label">Existing Password</label>
+					<input id="pass1" type="password" class="input" data-type="password">
+				</div>
+
+				<div class="group">
+					<button class="Unlock" id="ChangePassword" onclick="UnlockPass()">Unlock Pass</button>
+					<!-- <input type="submit" class="button" value="Sign Up"> -->
+				</div>
+				<div class="hr"></div>
+				<div class="foot-lnk">
+					<!-- <a href="#forgot">Forgot Password?</a> -->
+				</div>
+			</div>
+
+			<div class="sign-up-htm">
+				<div class="group">
+					<label for="user" class="label">Existing Email</label>
+					<input id="ExistingEmail" type="text" class="input">
+				</div>
+				<div class="group">
+					<label for="pass" class="label">Existing Password</label>
+					<input id="ExistingPassword" type="password" class="input" data-type="password">
+				</div>
+				<div class="group">
+					<label for="pass" class="label">New Password</label>
+					<input id="NewPassword" type="password" class="input" data-type="password">
+				</div>
+<!-- 				<div class="group">
+					<label for="pass" class="label">Email Address</label>
+					<input id="pass" type="text" class="input">
+				</div> -->
+				<div class="group">
+					<button class="Change" id="ChangePassword" onclick="ChangePass()">Change Pass</button>
+					<!-- <input type="submit" class="button" value="Sign Up"> -->
+				</div>
+				<div class="hr"></div>
+				<!-- <div class="foot-lnk">
+					<a href="index.html">New Registration?</a>
+					<form ></form>
+					<button id="registration" type="submit" onclick="NewRegistration()">New registration</button>
+				</div> -->
+			</div>
+		</div>
+	</div>
+</div>
+	
+	<script src ="script.js"> </script> 
+</body>
+</html>
